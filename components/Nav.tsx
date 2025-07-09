@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { FiMenu, FiX } from "react-icons/fi"; // ← アイコンを追加
 
 export default function Nav() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -10,14 +11,14 @@ export default function Nav() {
         <nav className="bg-white shadow-md fixed top-0 left-0 w-full py-4 z-50">
             <div className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
                 <Link href="#top" className="text-3xl font-bold text-brown-700 p-2">
-                    🥐 Lumière
+                    <span>Lumière</span>
                 </Link>
 
                 {/* PCメニュー */}
                 <div className="hidden md:flex gap-6">
-                    <Link href="#products" className="hover:text-brown-600">おすすめのパン</Link>
                     <Link href="#about" className="hover:text-brown-600">Lumière について</Link>
-                    <Link href="#access" className="hover:text-brown-600">アクセス</Link>
+                    <Link href="#products" className="hover:text-brown-600">おすすめのパン</Link>
+                    <Link href="#access" className="hover:text-brown-600">アクセス & 営業時間</Link>
                 </div>
 
                 {/* モバイルメニュー切り替え */}
@@ -25,13 +26,7 @@ export default function Nav() {
                     className="md:hidden focus:outline-none"
                     onClick={() => setMenuOpen(!menuOpen)}
                 >
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        {menuOpen ? (
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                        ) : (
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                        )}
-                    </svg>
+                    {menuOpen ? <FiX className="w-6 h-6" /> : <FiMenu className="w-6 h-6" />}
                 </button>
             </div>
 
