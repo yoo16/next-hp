@@ -9,7 +9,7 @@ export default function Nav() {
     return (
         <nav className="bg-white shadow-md fixed top-0 left-0 w-full py-4 z-50">
             <div className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-                <Link href="/" className="text-2xl font-bold text-brown-700">
+                <Link href="#top" className="text-3xl font-bold text-brown-700 p-2">
                     🥐 Lumière
                 </Link>
 
