@@ -7,7 +7,11 @@ const products = [
     { id: 1, name: "クロワッサン", image: "/images/croissant.webp" },
     { id: 2, name: "バゲット", image: "/images/baguette.webp" },
     { id: 3, name: "パン・オ・ショコラ", image: "/images/pain-au-chocolat.webp" },
+    { id: 4, name: "ブリオッシュ", image: "/images/brioche.webp" },
+    { id: 5, name: "カンパーニュ", image: "/images/campagne.webp" },
+    { id: 6, name: "キッシュ", image: "/images/quiche.webp" },
 ];
+
 
 export default function Products() {
     return (
@@ -26,7 +30,7 @@ export default function Products() {
                 transition={{ delay: 0.2, duration: 0.6 }}
                 viewport={{ once: false }}
             >
-                おすすめのパン
+                人気商品
             </motion.h2>
 
             <div className="flex justify-center gap-8 flex-wrap">

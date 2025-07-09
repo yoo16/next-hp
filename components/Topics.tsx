@@ -13,21 +13,21 @@ export default function Topics() {
     return (
         <motion.section
             id="topics"
-            className="max-w-2xl mx-auto text-left h-screen px-4 py-12 scroll-mt-20"
+            className="max-w-2xl mx-auto text-xl h-screen px-4 py-12 scroll-mt-20"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.6 }}
             viewport={{ once: false }}
         >
-            <h3 className="text-2xl font-semibold mb-4 text-center">
+            <h3 className="text-3xl font-semibold p-4 mb-4 text-center">
                 <FaInfoCircle className="inline-block mr-2 text-brown-700" />
                 Topics
             </h3>
             <ul className="space-y-3">
                 {topics.map((item, index) => (
                     <li key={index} className="border-b pb-2">
-                        <p className="text-sm text-gray-500">{item.date}</p>
-                        <p className="text-md font-medium">{item.title}</p>
+                        <p className="text-md py-2 text-gray-500">{item.date}</p>
+                        <p className="py-2 font-medium">{item.title}</p>
                     </li>
                 ))}
             </ul>

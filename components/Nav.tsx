@@ -29,7 +29,7 @@ export default function Nav() {
                     </Link>
                     <Link href="#products" className="flex items-center gap-2 hover:text-brown-600">
                         <FaArrowCircleRight />
-                        おすすめのパン
+                        人気商品
                     </Link>
                     <Link href="#access" className="flex items-center gap-2 hover:text-brown-600">
                         <FaArrowCircleRight />
