@@ -1,6 +1,6 @@
 export default function Access() {
     return (
-        <section id="access" className="py-12 bg-white text-center px-4">
+        <section id="access" className="py-12 bg-white text-center px-4 scroll-mt-20">
             <h2 className="text-3xl font-bold mb-4">アクセス & 営業時間</h2>
             <p className="text-lg">東京都世田谷区パン通り3-14-7</p>
             <p className="text-lg mt-2">営業時間：8:00〜18:00（定休：水曜日）</p>
