@@ -2,7 +2,9 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { FiMenu, FiX } from "react-icons/fi"; // ← アイコンを追加
+import { FiMenu, FiX } from "react-icons/fi";
+import { FaArrowCircleRight } from "react-icons/fa";
+
 
 export default function Nav() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -15,10 +17,24 @@ export default function Nav() {
                 </Link>
 
                 {/* PCメニュー */}
-                <div className="hidden md:flex gap-6">
-                    <Link href="#about" className="hover:text-brown-600">Lumière について</Link>
-                    <Link href="#products" className="hover:text-brown-600">おすすめのパン</Link>
-                    <Link href="#access" className="hover:text-brown-600">アクセス & 営業時間</Link>
+                {/* PCメニュー */}
+                <div className="hidden md:flex gap-6 items-center">
+                    <Link href="#about" className="flex items-center gap-2 hover:text-brown-600">
+                        <FaArrowCircleRight />
+                        Lumière について
+                    </Link>
+                    <Link href="#topics" className="flex items-center gap-2 hover:text-brown-600">
+                        <FaArrowCircleRight />
+                        Topics
+                    </Link>
+                    <Link href="#products" className="flex items-center gap-2 hover:text-brown-600">
+                        <FaArrowCircleRight />
+                        おすすめのパン
+                    </Link>
+                    <Link href="#access" className="flex items-center gap-2 hover:text-brown-600">
+                        <FaArrowCircleRight />
+                        アクセス & 営業時間
+                    </Link>
                 </div>
 
                 {/* モバイルメニュー切り替え */}
