@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FaArrowCircleRight } from "react-icons/fa";
+import { Clock, MapPin } from "lucide-react"
 
 export default function Access() {
     return (
@@ -30,7 +30,7 @@ export default function Access() {
                 transition={{ delay: 0.3, duration: 0.5 }}
                 viewport={{ once: false }}
             >
-                <FaArrowCircleRight className="inline-block mr-2" />
+                <MapPin className="inline-block mr-2" />
                 東京都世田谷区パン通り3-14-7
             </motion.p>
 
@@ -41,7 +41,7 @@ export default function Access() {
                 transition={{ delay: 0.4, duration: 0.5 }}
                 viewport={{ once: false }}
             >
-                <FaArrowCircleRight className="inline-block mr-2" />
+                <Clock className="inline-block mr-2" />
                 営業時間：8:00〜18:00（定休：水曜日）
             </motion.p>
 

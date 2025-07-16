@@ -1,12 +1,18 @@
-import Image from 'next/image'; // ← Imageも忘れずにimport
+import { Product } from '@/types/Product';
+import Image from 'next/image';
 
 interface Props {
-    product: { id: number, name: string; image: string };
+    product: Product;
 }
 
 export default function ProductCard({ product }: Props) {
     return (
-        <div className="flex flex-col items-center p-4">
+        <div className="relative flex flex-col items-center p-4">
+            {product.recommend && (
+                <div className="absolute top-2 right-2 bg-red-500 text-white text-sm px-4 py-1 rounded-full shadow">
+                    {product.recommend}
+                </div>
+            )}
             <div className="rounded-3xl overflow-hidden">
                 <Image
                     src={product.image}

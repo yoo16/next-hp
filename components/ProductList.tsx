@@ -5,6 +5,7 @@ import ProductCard from './ProductCard';
 import { useEffect, useState } from 'react';
 import ProductModal from '@/components/ProductDetail';
 import { Product } from '@/types/Product';
+import { Croissant } from 'lucide-react';
 
 export default function ProductList() {
     const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
@@ -36,7 +37,8 @@ export default function ProductList() {
                 transition={{ delay: 0.2, duration: 0.6 }}
                 viewport={{ once: false }}
             >
-                人気商品
+                <Croissant className="inline-block mr-2 text-brown-700" />
+                Products
             </motion.h2>
 
             <div className="flex justify-center gap-8 flex-wrap">

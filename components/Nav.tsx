@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { FiMenu, FiX } from "react-icons/fi";
-import { Home, Star, Paperclip, Info, MapPin } from "lucide-react";
+import { Home, Croissant, Paperclip, Info, MapPin } from "lucide-react";
 
 
 export default function Nav() {
@@ -24,19 +24,19 @@ export default function Nav() {
                     </Link>
                     <Link href="#about" className="flex items-center gap-2 hover:text-brown-600">
                         <Paperclip />
-                        Lumière について
+                        About Lumière
                     </Link>
                     <Link href="#topics" className="flex items-center gap-2 hover:text-brown-600">
                         <Info />
                         Topics
                     </Link>
                     <Link href="#products" className="flex items-center gap-2 hover:text-brown-600">
-                        <Star />
-                        人気商品
+                        <Croissant />
+                        Products
                     </Link>
                     <Link href="#access" className="flex items-center gap-2 hover:text-brown-600">
                         <MapPin />
-                        アクセス & 営業時間
+                        Access & Hours
                     </Link>
                 </div>
 
