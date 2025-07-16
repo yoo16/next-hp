@@ -35,17 +35,28 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
                 onClick={onClose}
             >
                 <motion.div
-                    className="bg-white rounded-xl shadow-lg p-6 max-w-md w-full relative"
+                    className="bg-white rounded-xl shadow-lg max-w-md w-full relative"
                     initial={{ scale: 0.8, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
                     exit={{ scale: 0.8, opacity: 0 }}
                     onClick={(e) => e.stopPropagation()}
                 >
 
-                    <Image src={product.image} alt={product.name} className="rounded w-full mb-4" width={500} height={500} />
+                    <Image src={product.image} alt={product.name} className="w-full" width={500} height={500} />
 
-                    <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
-                    <p className="text-gray-600 text-left">{product.description}</p>
+                    <div className="px-4">
+                        <h3 className="text-xl font-semibold p-2">
+                            {product.name}
+                        </h3>
+
+                        {product.recommend && (
+                            <span className="bg-red-500 text-white text-sm px-4 py-1 rounded-full shadow">
+                                {product.recommend}
+                            </span>
+                        )}
+
+                        <p className="text-gray-600 text-left p-4">{product.description}</p>
+                    </div>
                 </motion.div>
             </motion.div>
         </AnimatePresence>
