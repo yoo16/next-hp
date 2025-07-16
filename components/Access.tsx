@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Clock, MapPin } from "lucide-react"
+import { Clock, MapPin ,Map } from "lucide-react"
 
 export default function Access() {
     return (
@@ -16,6 +16,7 @@ export default function Access() {
                 transition={{ delay: 0.2, duration: 0.5 }}
                 viewport={{ once: false }}
             >
+                <Map className="inline-block mr-2 text-brown-700" />
                 アクセス & 営業時間
             </motion.h2>
 

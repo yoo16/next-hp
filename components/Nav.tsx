@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { FiMenu, FiX } from "react-icons/fi";
-import { Home, Croissant, Paperclip, Info, MapPin } from "lucide-react";
+import { Home, Croissant, Paperclip, Info, Map } from "lucide-react";
 
 
 export default function Nav() {
@@ -35,7 +35,7 @@ export default function Nav() {
                         Products
                     </Link>
                     <Link href="#access" className="flex items-center gap-2 hover:text-brown-600">
-                        <MapPin />
+                        <Map />
                         Access & Hours
                     </Link>
                 </div>
