@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion';
-import { FaInfoCircle } from 'react-icons/fa'
+import { FaInfoCircle, FaArrowCircleRight } from 'react-icons/fa'
 import { Topic } from '@/types/Type';
 
 export default function Topics() {
@@ -33,8 +33,11 @@ export default function Topics() {
             </h3>
             <ul className="space-y-3">
                 {topics.map((item, index) => (
-                    <li key={index} className="border-b pb-2">
-                        <p className="text-md py-2 text-gray-500">{item.date}</p>
+                    <li key={index} className="border-b p-2">
+                        <p className="text-md py-2 text-black">
+                            <FaArrowCircleRight className="inline-block mr-2 text-brown-700" />
+                            <span className="mt-1">{item.date}</span>
+                        </p>
                         <p className="py-2 font-medium">{item.title}</p>
                     </li>
                 ))}
