@@ -1,15 +1,23 @@
 'use client';
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion';
 import { FaInfoCircle } from 'react-icons/fa'
+import { Topic } from '@/types/Type';
 
 export default function Topics() {
-    const topics = [
-        { date: "2025-07-01", title: "新作クロワッサン販売開始！" },
-        { date: "2025-06-20", title: "7月の営業日変更のお知らせ" },
-        { date: "2025-06-10", title: "Lumièreが雑誌に掲載されました" },
-    ];
+    const [topics, setTopics] = useState<Topic[]>([]);
+
+    useEffect(() => {
+        const fetchTopics = async () => {
+            const res = await fetch('/api/topics');
+            const data = await res.json();
+            setTopics(data);
+        };
+
+        fetchTopics();
+    }, []);
+
     return (
         <motion.section
             id="topics"

@@ -6,7 +6,7 @@ export default function About() {
     return (
         <motion.section
             id="about"
-            className="py-12 text-center h-screen px-4 scroll-mt-20"
+            className="py-12 text-center px-4 scroll-mt-20"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}

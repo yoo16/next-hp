@@ -1,14 +1,24 @@
 'use client';
 
-import { products } from '@/data/products';
 import { motion } from 'framer-motion';
 import ProductCard from './ProductCard';
-import { Product } from '@/types/Product';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import ProductModal from '@/components/ProductDetail';
+import { Product } from '@/types/Product';
 
 export default function ProductList() {
     const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+    const [products, setProducts] = useState<Product[]>([]);
+
+    useEffect(() => {
+        const fetchProducts = async () => {
+            const res = await fetch('/api/products');
+            const data = await res.json();
+            setProducts(data);
+        };
+        fetchProducts();
+    }, []);
+
 
     return (
         <motion.section
