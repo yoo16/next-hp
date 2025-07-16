@@ -45,10 +45,12 @@ export default function Topics() {
                         }
                     >
                         <p className="text-md text-black">
-                            <FaArrowCircleRight className="inline-block mr-2 text-brown-700" />
                             <span>{item.date}</span>
                         </p>
-                        <p className="font-semibold text-lg mt-1">{item.title}</p>
+                        <p className="font-semibold text-lg mt-1">
+                            <FaArrowCircleRight className="inline-block mr-2 text-brown-700" />
+                            {item.title}
+                        </p>
 
                         <AnimatePresence>
                             {openIndex === index && (
