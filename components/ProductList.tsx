@@ -1,23 +1,19 @@
 'use client';
 
+import { products } from '@/data/products';
 import { motion } from 'framer-motion';
 import ProductCard from './ProductCard';
+import { Product } from '@/types/Product';
+import { useState } from 'react';
+import ProductModal from '@/components/ProductDetail';
 
-const products = [
-    { id: 1, name: "クロワッサン", image: "/images/croissant.webp" },
-    { id: 2, name: "バゲット", image: "/images/baguette.webp" },
-    { id: 3, name: "パン・オ・ショコラ", image: "/images/pain-au-chocolat.webp" },
-    { id: 4, name: "ブリオッシュ", image: "/images/brioche.webp" },
-    { id: 5, name: "カンパーニュ", image: "/images/campagne.webp" },
-    { id: 6, name: "キッシュ", image: "/images/quiche.webp" },
-];
+export default function ProductList() {
+    const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
-
-export default function Products() {
     return (
         <motion.section
             id="products"
-            className="py-12 bg-white text-center h-screen scroll-mt-20"
+            className="py-12 bg-white text-center scroll-mt-20"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -41,11 +37,16 @@ export default function Products() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 + index * 0.2, duration: 0.5 }}
                         viewport={{ once: false }}
+                        onClick={() => setSelectedProduct(product)}
+                        className="cursor-pointer"
                     >
                         <ProductCard product={product} />
                     </motion.div>
                 ))}
             </div>
+
+            {/* モーダル表示 */}
+            <ProductModal product={selectedProduct} onClose={() => setSelectedProduct(null)} />
         </motion.section>
     );
 }

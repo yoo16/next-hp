@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { FiMenu, FiX } from "react-icons/fi";
-import { FaArrowCircleRight } from "react-icons/fa";
+import { Home, Star, Paperclip, Info, MapPin } from "lucide-react";
 
 
 export default function Nav() {
@@ -17,22 +17,25 @@ export default function Nav() {
                 </Link>
 
                 {/* PCメニュー */}
-                {/* PCメニュー */}
                 <div className="hidden md:flex gap-6 items-center">
+                    <Link href="/" className="flex items-center gap-2 hover:text-brown-600">
+                        <Home className="w-5 h-5" />
+                        Home
+                    </Link>
                     <Link href="#about" className="flex items-center gap-2 hover:text-brown-600">
-                        <FaArrowCircleRight />
+                        <Paperclip />
                         Lumière について
                     </Link>
                     <Link href="#topics" className="flex items-center gap-2 hover:text-brown-600">
-                        <FaArrowCircleRight />
+                        <Info />
                         Topics
                     </Link>
                     <Link href="#products" className="flex items-center gap-2 hover:text-brown-600">
-                        <FaArrowCircleRight />
+                        <Star />
                         人気商品
                     </Link>
                     <Link href="#access" className="flex items-center gap-2 hover:text-brown-600">
-                        <FaArrowCircleRight />
+                        <MapPin />
                         アクセス & 営業時間
                     </Link>
                 </div>

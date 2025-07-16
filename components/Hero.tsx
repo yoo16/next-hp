@@ -1,8 +1,23 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
 export default function Hero() {
+    const fullText = "今日も、焼きたての香りから、あなたの一日が始まる。";
+    const [displayedText, setDisplayedText] = useState('');
+
+    useEffect(() => {
+        let i = 0;
+        const interval = setInterval(() => {
+            setDisplayedText(fullText.slice(0, i + 1));
+            i++;
+            if (i >= fullText.length) clearInterval(interval);
+        }, 100);
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <motion.section
             id="hero"
@@ -27,12 +42,12 @@ export default function Hero() {
                 </motion.h1>
 
                 <motion.p
-                    className="text-xl"
+                    className="text-left text-xl whitespace-pre-wrap py-6"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ delay: 0.9, duration: 0.6 }}
+                    transition={{ delay: 0.2, duration: 0.3 }}
                 >
-                    毎朝焼きたてのパンを、あなたに。
+                    {displayedText}
                 </motion.p>
             </motion.div>
         </motion.section>

@@ -1,5 +1,5 @@
 import Hero from "@/components/Hero";
-import Products from "@/components/Products";
+import Products from "@/components/ProductList";
 import About from "@/components/About";
 import Access from "@/components/Access";
 import Footer from "@/components/Footer";
