@@ -22,13 +22,9 @@ export default function ProductList() {
 
 
     return (
-        <motion.section
+        <section
             id="products"
             className="py-12 bg-white text-center scroll-mt-20"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: false }}
         >
             <motion.h2
                 className="text-3xl font-bold mb-8"
@@ -59,6 +55,6 @@ export default function ProductList() {
 
             {/* モーダル表示 */}
             <ProductModal product={selectedProduct} onClose={() => setSelectedProduct(null)} />
-        </motion.section>
+        </section>
     );
 }

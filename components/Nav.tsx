@@ -24,7 +24,7 @@ export default function Nav() {
                     </Link>
                     <Link href="#about" className="flex items-center gap-2 hover:text-brown-600">
                         <Paperclip />
-                        About Lumière
+                        About
                     </Link>
                     <Link href="#topics" className="flex items-center gap-2 hover:text-brown-600">
                         <Info />

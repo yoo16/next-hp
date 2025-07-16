@@ -13,15 +13,14 @@ export default function About() {
             viewport={{ once: false }}
         >
             <motion.h2
-                className="text-3xl font-bold p-4 mb-4"
+                className="text-3xl font-bold p-4 mb-4 text-center"
                 initial={{ opacity: 0, y: -20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2, duration: 0.6 }}
+                transition={{ delay: 0.2, duration: 0.5 }}
                 viewport={{ once: false }}
             >
                 Lumière について
             </motion.h2>
-
             <div className="my-8 text-xl">
                 <p className="p-4">
                     ブーランジェリー・リュミエールは、フランス伝統のレシピと職人技を大切にしながら、
