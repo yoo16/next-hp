@@ -35,21 +35,20 @@ export default function Hero() {
                 playsInline
                 className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
             >
-                <source src="/movies/main.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
+                <source src="/movies/main1.mp4" type="video/mp4" />
             </video>
 
             {/* Video Mask Overlay */}
             <div className="absolute top-0 left-0 w-full h-full bg-white opacity-30 z-0"></div>
 
             <motion.div
-                className="text-center bg-white p-8 w-1/2 rounded-xl z-10"
+                className="text-center bg-gray-100 p-8 w-1/2 rounded-xl z-10"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 0.8, y: 0 }} // Changed back to 1 for the container's opacity
                 transition={{ delay: 0.3, duration: 0.8 }}
             >
                 <motion.h1
-                    className="text-5xl font-bold mb-4"
+                    className="text-5xl text-gray-800 font-bold mb-4"
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.6, duration: 0.6 }}
@@ -63,7 +62,7 @@ export default function Hero() {
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.2, duration: 0.3 }}
                 >
-                    {displayedText} {/* Using displayedText for typing effect */}
+                    {displayedText}
                 </motion.p>
             </motion.div>
         </motion.section>
